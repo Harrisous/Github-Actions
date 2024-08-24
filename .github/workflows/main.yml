@@ -1,18 +1,18 @@
 # You need the AZURE_WEB_APP_NAME and to download the deployment profile and
 # add it as a secret to this repo with the name AZURE_WEBAPP_PUBLISH_PROFILE
-name: Trigger auto deployment for demo-container
+name: Docker Hub Demo
 
-env:
-  # !!!! UPDATE THESE VARIABLE BELOW !!!!
-  AZURE_WEBAPP_NAME: deployment-demo 
-  AZURE_GROUP_NAME: dep-demo
+# env:
+#   # !!!! UPDATE THESE VARIABLE BELOW !!!!
+#   AZURE_WEBAPP_NAME: deployment-demo 
+#   AZURE_GROUP_NAME: dep-demo
 
 # When this action will be executed
 on:
   # Automatically trigger it when detected changes in repo. Remove comments to enable
-  push:
-   branches:
-     [ main ]
+  # push:
+  #  branches:
+  #    [ main ]
 
   # Allow mannually trigger
   workflow_dispatch:
@@ -36,7 +36,7 @@ jobs:
         context: ./
         file: ./Dockerfile
         push: true
-        tags: haochenLi/demo:latest
+        tags: haochenli/demo:latest
 
 # jobs:
 #   build:
