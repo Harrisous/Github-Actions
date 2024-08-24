@@ -36,7 +36,7 @@ jobs:
         context: ./
         file: ./Dockerfile
         push: true
-        tags: HaochenLi/Demo:latest
+        tags: haochenLi/demo:latest
 
 # jobs:
 #   build:
